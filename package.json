@@ -21,23 +21,23 @@
     "commands": [
       {
         "command": "codeBuddy.debug",
-        "title": "Code Buddy: Debug Code"
+        "title": "🤖 Code Buddy: Debug Code"
       },
       {
         "command": "codeBuddy.explain",
-        "title": "Code Buddy: Explain Code"
+        "title": "🤖 Code Buddy: Explain Code"
       },
       {
         "command": "codeBuddy.generateTests",
-        "title": "Code Buddy: Generate Test Cases"
+        "title": "🤖 Code Buddy: Generate Test Cases"
       },
       {
         "command": "codeBuddy.uploadDocument",
-        "title": "Code Buddy: Upload Document"
+        "title": "🤖 Code Buddy: Upload Document"
       },
       {
         "command": "codeBuddy.openChat",
-        "title": "Code Buddy: Open Chat"
+        "title": "🤖 Code Buddy: Open Chat"
       }
     ],
     "menus": {
@@ -60,7 +60,7 @@
       "activitybar": [
         {
           "id": "codeBuddyChat",
-          "title": "Code Buddy Chat",
+          "title": "🤖 Code Buddy Chat",
           "icon": "resources/chat-icon.svg"
         }
       ]
