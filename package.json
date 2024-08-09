@@ -1,0 +1,102 @@
+{
+  "name": "code-buddy-2",
+  "displayName": "Code Buddy 2.0",
+  "description": "AI-powered coding assistant using Ollama",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:codeBuddy.debug",
+    "onCommand:codeBuddy.explain",
+    "onCommand:codeBuddy.generateTests",
+    "onCommand:codeBuddy.uploadDocument",
+    "onCommand:codeBuddy.openChat"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "codeBuddy.debug",
+        "title": "Code Buddy: Debug Code"
+      },
+      {
+        "command": "codeBuddy.explain",
+        "title": "Code Buddy: Explain Code"
+      },
+      {
+        "command": "codeBuddy.generateTests",
+        "title": "Code Buddy: Generate Test Cases"
+      },
+      {
+        "command": "codeBuddy.uploadDocument",
+        "title": "Code Buddy: Upload Document"
+      },
+      {
+        "command": "codeBuddy.openChat",
+        "title": "Code Buddy: Open Chat"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "codeBuddy.debug",
+          "group": "codeBuddy"
+        },
+        {
+          "command": "codeBuddy.explain",
+          "group": "codeBuddy"
+        },
+        {
+          "command": "codeBuddy.generateTests",
+          "group": "codeBuddy"
+        }
+      ]
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "codeBuddyChat",
+          "title": "Code Buddy Chat",
+          "icon": "resources/chat-icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "codeBuddyChat": [
+        {
+          "id": "codeBuddyChatView",
+          "name": "Chat"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/glob": "^7.1.3",
+    "@types/mocha": "^8.2.2",
+    "@types/node": "14.x",
+    "eslint": "^7.27.0",
+    "@typescript-eslint/eslint-plugin": "^4.26.0",
+    "@typescript-eslint/parser": "^4.26.0",
+    "glob": "^7.1.7",
+    "mocha": "^8.4.0",
+    "typescript": "^4.3.2",
+    "vscode-test": "^1.5.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "node-fetch": "^2.6.1"
+  }
+}
